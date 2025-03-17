@@ -17,40 +17,40 @@ import linkedin from "../assets/linkedin.svg";
     </p>
   </div>
   <div class="footer_box box2">
-    <h5>KONTAKT</h5>
-    <p>kulturnatten@elsinore2032.dk</p>
-    <a href="#">
+    <h5 class="column1">KONTAKT</h5>
+    <p class="column1">kulturnatten@elsinore2032.dk</p>
+    <a class="column2" href="#">
       <img class="arrow" src={arrowPlaceholder.src} alt="" />
     </a>
   </div>
   <div class="footer_box box3">
-    <h5>LOKATION OG TIDSPUNKT</h5>
-    <p>
+    <h5 class="column1">LOKATION OG TIDSPUNKT</h5>
+    <p class="column1">
       Find den nøjagtige lokation og tidspunktet i
       <a href="program">programmet</a>.
     </p>
-    <a href="program">
+    <a class="column2" href="program">
       <img class="arrow" src={arrowPlaceholder.src} alt="" />
     </a>
   </div>
   <div class="footer_box box4">
-    <h5>ÅBNINGSTIDER</h5>
-    <p>Tikøb</p>
-    <p>19. september 2025</p>
-    <p>Espergærde & Helsingør</p>
-    <p>26. september 2025</p>
-    <a href="#">
+    <h5 class="column1">ÅBNINGSTIDER</h5>
+    <p class="column1 p_bold">Tikøb</p>
+    <p class="column1">19. september 2025</p>
+    <p class="column1 p_bold">Espergærde & Helsingør</p>
+    <p class="column1">26. september 2025</p>
+    <a class="column2" href="#">
       <img class="arrow" src={arrowPlaceholder.src} alt="" />
     </a>
   </div>
   <div class="footer_box box5">
-    <h5>SOCIALE MEDIER</h5>
-    <div>
-      <img src={facebook.src} alt="" />
-      <img src={instagram.src} alt="" />
-      <img src={linkedin.src} alt="" />
+    <h5 class="column1">SOCIALE MEDIER</h5>
+    <div class="column1 icon_box">
+      <a href="#"><img class="icons" src={facebook.src} alt="" /></a>
+      <a href="#"><img class="icons" src={instagram.src} alt="" /></a>
+      <a href="#"><img class="icons" src={linkedin.src} alt="" /></a>
     </div>
-    <a href="#">
+    <a class="column2" href="#">
       <img class="arrow" src={arrowPlaceholder.src} alt="" />
     </a>
   </div>
@@ -63,9 +63,25 @@ import linkedin from "../assets/linkedin.svg";
     color: var(--primary_text);
   }
 
+  div {
+    display: grid;
+  }
+
   .logo {
     border: 5px solid var(--primary_text);
-    transform: rotate(-90deg);
+    width: 75px;
+    height: 101%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: -2px;
+    margin-top: -2px;
+    h2 {
+      transform: rotate(-90deg);
+      padding: 2px;
+      justify-self: start;
+      font-size: 40px;
+      margin-left: 26px;
+    }
   }
 
   .footer_box {
@@ -76,12 +92,46 @@ import linkedin from "../assets/linkedin.svg";
 
   .box1 {
     height: 285px;
+    grid-template-columns: 80px auto;
+    p {
+      grid-row: 1/2;
+      grid-column: 2/3;
+      padding: 20px 12px;
+    }
   }
 
   .box2,
   .box3,
+  .box4,
+  .box5 {
+    display: grid;
+    grid-template-columns: auto 60px;
+    padding: 20px 6px 6px 12px;
+  }
+  .column1 {
+    grid-column: 1/2;
+  }
+  .column2 {
+    grid-column: 2/3;
+    width: 50px;
+    height: 51px;
+    place-self: end;
+  }
+  .box2,
+  .box3,
   .box5 {
     height: 120px;
+  }
+  .box3 {
+    p {
+      a {
+        color: var(--cta);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--cta_hover);
+      }
+    }
   }
   .box4 {
     height: 180px;
@@ -89,5 +139,33 @@ import linkedin from "../assets/linkedin.svg";
   .arrow {
     width: 50px;
     height: auto;
+  }
+
+  .arrow:hover {
+    animation-name: arrow_hover;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    fill: var(--cta);
+  }
+
+  @keyframes arrow_hover {
+    0% {
+      rotate: 0;
+    }
+    100% {
+      rotate: -90deg;
+    }
+  }
+
+  .icon_box {
+    display: flex;
+    gap: 10px;
+  }
+
+  .icons {
+    width: 40px;
+    height: 40px;
   }
 </style>
