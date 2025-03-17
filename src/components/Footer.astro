@@ -7,20 +7,23 @@ import linkedin from "../assets/linkedin.svg";
 
 <footer>
   <div class="footer_box box1">
+    <div class="logo">
+      <h2>KULTURNAT</h2>
+    </div>
     <p>
       Kulturnat er en årlig aften, hvor hele Helsingør fyldes med kultur, musik,
       kunst og oplevelser, mens byens museer, gallerier og kultursteder holder
       åbent med særlige arrangementer.
     </p>
   </div>
-  <div>
+  <div class="footer_box box2">
     <h5>KONTAKT</h5>
     <p>kulturnatten@elsinore2032.dk</p>
     <a href="#">
       <img class="arrow" src={arrowPlaceholder.src} alt="" />
     </a>
   </div>
-  <div class="footer_box box2">
+  <div class="footer_box box3">
     <h5>LOKATION OG TIDSPUNKT</h5>
     <p>
       Find den nøjagtige lokation og tidspunktet i
@@ -30,7 +33,7 @@ import linkedin from "../assets/linkedin.svg";
       <img class="arrow" src={arrowPlaceholder.src} alt="" />
     </a>
   </div>
-  <div class="footer_box box3">
+  <div class="footer_box box4">
     <h5>ÅBNINGSTIDER</h5>
     <p>Tikøb</p>
     <p>19. september 2025</p>
@@ -40,7 +43,7 @@ import linkedin from "../assets/linkedin.svg";
       <img class="arrow" src={arrowPlaceholder.src} alt="" />
     </a>
   </div>
-  <div class="footer_box box4">
+  <div class="footer_box box5">
     <h5>SOCIALE MEDIER</h5>
     <div>
       <img src={facebook.src} alt="" />
@@ -54,19 +57,35 @@ import linkedin from "../assets/linkedin.svg";
 </footer>
 
 <style>
+  h2,
   h5,
   p {
     color: var(--primary_text);
   }
 
+  .logo {
+    border: 5px solid var(--primary_text);
+    transform: rotate(-90deg);
+  }
+
   .footer_box {
     border: 2px solid var(--primary_text);
     margin-bottom: -2px;
+    width: 100%;
   }
 
   .box1 {
+    height: 285px;
   }
 
+  .box2,
+  .box3,
+  .box5 {
+    height: 120px;
+  }
+  .box4 {
+    height: 180px;
+  }
   .arrow {
     width: 50px;
     height: auto;
