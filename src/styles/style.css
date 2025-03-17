@@ -29,6 +29,10 @@ img {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #212121;
+}
+
 h1,
 h2,
 h3,

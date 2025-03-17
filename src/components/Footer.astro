@@ -1,0 +1,74 @@
+---
+import arrowPlaceholder from "../assets/arrow_placeholder.svg";
+import facebook from "../assets/facebook.svg";
+import instagram from "../assets/instagram.svg";
+import linkedin from "../assets/linkedin.svg";
+---
+
+<footer>
+  <div class="footer_box box1">
+    <p>
+      Kulturnat er en årlig aften, hvor hele Helsingør fyldes med kultur, musik,
+      kunst og oplevelser, mens byens museer, gallerier og kultursteder holder
+      åbent med særlige arrangementer.
+    </p>
+  </div>
+  <div>
+    <h5>KONTAKT</h5>
+    <p>kulturnatten@elsinore2032.dk</p>
+    <a href="#">
+      <img class="arrow" src={arrowPlaceholder.src} alt="" />
+    </a>
+  </div>
+  <div class="footer_box box2">
+    <h5>LOKATION OG TIDSPUNKT</h5>
+    <p>
+      Find den nøjagtige lokation og tidspunktet i
+      <a href="program">programmet</a>.
+    </p>
+    <a href="program">
+      <img class="arrow" src={arrowPlaceholder.src} alt="" />
+    </a>
+  </div>
+  <div class="footer_box box3">
+    <h5>ÅBNINGSTIDER</h5>
+    <p>Tikøb</p>
+    <p>19. september 2025</p>
+    <p>Espergærde & Helsingør</p>
+    <p>26. september 2025</p>
+    <a href="#">
+      <img class="arrow" src={arrowPlaceholder.src} alt="" />
+    </a>
+  </div>
+  <div class="footer_box box4">
+    <h5>SOCIALE MEDIER</h5>
+    <div>
+      <img src={facebook.src} alt="" />
+      <img src={instagram.src} alt="" />
+      <img src={linkedin.src} alt="" />
+    </div>
+    <a href="#">
+      <img class="arrow" src={arrowPlaceholder.src} alt="" />
+    </a>
+  </div>
+</footer>
+
+<style>
+  h5,
+  p {
+    color: var(--primary_text);
+  }
+
+  .footer_box {
+    border: 2px solid var(--primary_text);
+    margin-bottom: -2px;
+  }
+
+  .box1 {
+  }
+
+  .arrow {
+    width: 50px;
+    height: auto;
+  }
+</style>
