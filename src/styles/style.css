@@ -1,0 +1,44 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* general */
+
+:root {
+  --primary_bg: #212121;
+  --secondary_bg: #343434;
+  --primary_text: #fcf7eb;
+  --secondary_text: #c1c1c1;
+  --cta: #a778cd;
+  --cta_hover: #5e367f;
+  --cat_red: #d27575;
+  --cat_yellow: #d2b875;
+  --cat_green: #a7d275;
+  --cat_brown: #c4a28e;
+  --cat_blue: #85b3c8;
+  --cat_pink: #d99bcb;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: Helvetica, sans-serif;
+}
+
+h5 {
+  font-family:
+    Bebas neue,
+    sans-serif;
+}
