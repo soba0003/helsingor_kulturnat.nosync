@@ -1,0 +1,152 @@
+---
+
+---
+
+<header>
+  <nav>
+    <div class="logo">
+      <a href="/">
+        <img src="../assets/placeholderlogo.png" alt="Kulturnat-logo" />
+      </a>
+    </div>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <span>MENU</span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="/">FORSIDE</a></li>
+        <li><a href="/program-19">PROGRAM 19/9</a></li>
+        <li><a href="/program-26">PROGRAM 26/9</a></li>
+        <li><a href="/arrangor">ARRANGØR</a></li>
+        <li><a href="/om-os">OM OS</a></li>
+        <li><a href="/kontakt">KONTAKT</a></li>
+      </ul>
+      <div class="socials">
+        <img src="../assets/facebook-w.svg" alt="Facebook" />
+        <img src="../assets/instagram-w.svg" alt="Instagram" />
+        <img src="../assets/linkedin-w.svg" alt="LinkedIn" />
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+    const menu = document.querySelector(".menu");
+
+    burger.addEventListener("click", burgerClick);
+    function burgerClick() {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+      menu.classList.toggle("active");
+    }
+
+    menu.addEventListener("click", menuClick);
+    function menuClick() {
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+      menu.classList.remove("active");
+    }
+  });
+</script> -->
+
+<style>
+  /* Header */
+  header {
+    background: var(--primary_bg);
+    color: var(--primary_text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  /* Logo */
+  .logo img {
+    max-width: 120px;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .burger span {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .burger .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  /* Lilla menu */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--cta);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu.active {
+    transform: translateY(0);
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .menu li {
+    font-size: 20px;
+    color: white;
+    padding: 15px 0;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .menu span {
+    font-size: 20px;
+  }
+
+  /* Sociale medier */
+  .socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .socials img {
+    width: 30px;
+    margin: 0 10px;
+  }
+</style>
