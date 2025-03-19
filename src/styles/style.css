@@ -39,6 +39,7 @@ h3,
 h4,
 p {
   font-family: Helvetica, sans-serif;
+  color: var(--primary_text);
 }
 
 h5 {
