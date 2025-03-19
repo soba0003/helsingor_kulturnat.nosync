@@ -3,12 +3,13 @@ import arrowPlaceholder from "../assets/arrow_placeholder.svg";
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 import linkedin from "../assets/linkedin.svg";
+import logoMobilFooter from "../assets/footer-logo-mobil.svg";
 ---
 
 <footer>
   <div class="footer_box box1">
     <div class="logo">
-      <h2>KULTURNAT</h2>
+      <img class="logo-svg" src={logoMobilFooter.src} alt="Kulturnat-logo" />
     </div>
     <p>
       Kulturnat er en årlig aften, hvor hele Helsingør fyldes med kultur, musik,
@@ -35,9 +36,9 @@ import linkedin from "../assets/linkedin.svg";
   </div>
   <div class="footer_box box4">
     <h5>ÅBNINGSTIDER</h5>
-    <p>Tikøb</p>
+    <p class="p_bold">Tikøb</p>
     <p>19. september 2025</p>
-    <p>Espergærde & Helsingør</p>
+    <p class="p_bold">Espergærde & Helsingør</p>
     <p>26. september 2025</p>
     <a href="#">
       <img class="arrow" src={arrowPlaceholder.src} alt="" />
@@ -45,7 +46,7 @@ import linkedin from "../assets/linkedin.svg";
   </div>
   <div class="footer_box box5">
     <h5>SOCIALE MEDIER</h5>
-    <div>
+    <div class="socials-flex">
       <img src={facebook.src} alt="" />
       <img src={instagram.src} alt="" />
       <img src={linkedin.src} alt="" />
@@ -63,9 +64,8 @@ import linkedin from "../assets/linkedin.svg";
     color: var(--primary_text);
   }
 
-  .logo {
-    border: 5px solid var(--primary_text);
-    transform: rotate(-90deg);
+  footer {
+    background-color: var(--secondary_bg);
   }
 
   .footer_box {
@@ -76,18 +76,47 @@ import linkedin from "../assets/linkedin.svg";
 
   .box1 {
     height: 285px;
+    overflow: hidden;
+    display: flex;
+    gap: 30px;
+  }
+
+  .logo-svg {
+    height: 100%;
+    width: auto;
+  }
+
+  .box1 p {
+    margin-top: 20px;
+    margin-right: 30px;
   }
 
   .box2,
   .box3,
-  .box5 {
-    height: 120px;
-  }
+  .box5,
   .box4 {
-    height: 180px;
+    padding: 20px 0 0 20px;
   }
   .arrow {
     width: 50px;
     height: auto;
+    margin-left: auto;
+    padding: 5px;
+  }
+
+  .box3 a {
+    color: var(--cta);
+  }
+
+  h5 {
+    margin-bottom: 7px;
+  }
+  .socials-flex {
+    display: flex;
+    gap: 10px;
+  }
+
+  .socials-flex img {
+    width: 40px;
   }
 </style>
