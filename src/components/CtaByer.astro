@@ -1,0 +1,31 @@
+---
+const { imgbackground, imgsvg } = Astro.props;
+---
+
+<a href="../pages/program">
+  <img class="background-cta" src={imgbackground} alt="Hønseskidning" />
+  <img class="overlay-cta" src={imgsvg} alt="Tikøb, 19/9 2025, pil" /></a
+>
+
+<style>
+  a {
+    position: relative;
+  }
+  .background-cta {
+    width: 100%;
+    display: block;
+    aspect-ratio: 342/174;
+  }
+  .overlay-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: auto;
+    transition: width 0.2s ease-in-out;
+  }
+  .overlay-cta:hover {
+    width: 100%;
+  }
+</style>

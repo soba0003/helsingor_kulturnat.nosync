@@ -3,12 +3,15 @@ import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import Menu from "../components/Menu.astro";
+import CtaByer from "../components/CtaByer.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Billeder:
+import hoenseskidning from "../assets/hoenseskidning.webp";
+import tikoeb from "../assets/tikoeb.svg";
 ---
 
 <Layout>
   <Menu />
+  <CtaByer imgbackground={hoenseskidning.src} imgsvg={tikoeb.src} />
   <Footer />
 </Layout>
