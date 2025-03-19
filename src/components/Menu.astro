@@ -1,14 +1,17 @@
 ---
-
+import logoMobil from "../assets/logo-mobil.svg";
+import facebookMobil from "../assets/facebook-w.svg";
+import instagramMobil from "../assets/instagram-w.svg";
+import linkedinMobil from "../assets/linkedin-w.svg";
 ---
 
 <header>
+  <div class="logo">
+    <a href="/">
+      <img src={logoMobil.src} alt="Kulturnat-logo" />
+    </a>
+  </div>
   <nav>
-    <div class="logo">
-      <a href="/">
-        <img src="../assets/placeholderlogo.png" alt="Kulturnat-logo" />
-      </a>
-    </div>
     <div class="burger">
       <div class="line"></div>
       <div class="line"></div>
@@ -24,15 +27,15 @@
         <li><a href="/kontakt">KONTAKT</a></li>
       </ul>
       <div class="socials">
-        <img src="../assets/facebook-w.svg" alt="Facebook" />
-        <img src="../assets/instagram-w.svg" alt="Instagram" />
-        <img src="../assets/linkedin-w.svg" alt="LinkedIn" />
+        <img src={facebookMobil.src} alt="Facebook-logo" />
+        <img src={instagramMobil.src} alt="Instagram-logo" />
+        <img src={linkedinMobil.src} alt="Linkedin-logo" />
       </div>
     </div>
   </nav>
 </header>
 
-<!-- <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector("nav");
@@ -52,7 +55,7 @@
       menu.classList.remove("active");
     }
   });
-</script> -->
+</script>
 
 <style>
   /* Header */
@@ -63,6 +66,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    z-index: 200;
   }
 
   /* Logo */
@@ -76,6 +80,7 @@
     align-items: center;
     cursor: pointer;
     text-align: center;
+    z-index: 100;
   }
 
   .burger span {
@@ -86,7 +91,7 @@
   .burger .line {
     width: 30px;
     height: 3px;
-    background: white;
+    background: var(--primary_text);
     margin: 4px 0;
     transition: 0.3s;
   }
@@ -105,6 +110,7 @@
     align-items: center;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
+    z-index: 50;
   }
 
   .menu.active {
@@ -115,28 +121,41 @@
     list-style: none;
     padding: 0;
     text-align: center;
+    width: 100%;
   }
 
   .menu li {
     font-size: 20px;
-    color: white;
+    color: var(--primary_text);
     padding: 15px 0;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--primary_text);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    justify-content: center;
   }
 
   .menu a {
     text-decoration: none;
-    color: white;
+    color: var(--primary_text);
     font-weight: bold;
   }
 
   .menu span {
     font-size: 20px;
   }
+
+  /* burger-linjernes classes der kaldes i js */
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  } /* En linje drejer 45 grader, 5px til højre (X-aksen) og 5px nedad (Y-aksen)*/
+
+  .burger.active .line:nth-child(2) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  } /* En linje drejer 45 grader, 5px til højre (X-aksen) og 5px nedad (Y-aksen)*/
 
   /* Sociale medier */
   .socials {
